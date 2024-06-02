@@ -1,5 +1,6 @@
 const express = require('express')
 const upload = require('./utils/multer.js')
+const {cloudinary} = require('./utils/cloudinary.js')
 const app = express()
 
 

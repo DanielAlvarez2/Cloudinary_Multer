@@ -13,7 +13,7 @@ app.use(express.urlencoded({limit: "50mb", extended:false}))
 
 
 
-app.get('/api/upload',async(req,res,next)=>{
+app.get('/',async(req,res,next)=>{
     const all_images = await cloudinary.api.resources()
     console.log(all_images)
     const images = await all_images.resources

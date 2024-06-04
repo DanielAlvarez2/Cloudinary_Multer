@@ -1,9 +1,9 @@
 require('dotenv').config()
 const express = require('express')
-app.use(express.static('public'))
 const upload = require('./utils/multer.js')
 const {cloudinary} = require('./utils/cloudinary.js')
 const app = express()
+app.use(express.static('public'))
 
 
 

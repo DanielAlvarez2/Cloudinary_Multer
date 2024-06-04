@@ -21,7 +21,7 @@ app.get('/',async(req,res,next)=>{
     res.render('index.ejs', {images})
 })
 
-app.post('/api/upload',upload.single('img'),async(req,res,next)=>{
+app.post('/',upload.single('img'),async(req,res,next)=>{
     console.log("File Details: ",req.file)
     const result = await cloudinary.uploader.upload(req.file.path)
     console.log('result: ',result)
